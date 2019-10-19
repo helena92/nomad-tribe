@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import moreIcon from './assets/more.svg';
 import './assets/Navigation.css';
 
@@ -7,7 +8,7 @@ const Navigation = () => (
     <ul className="main-nav-list">
       <li>
         <div className="menu-item">
-          <a className="who-we-are" href="#about">Who we are</a>
+          <Link className="who-we-are" to="about">Who we are</Link>
           <div className="more-icon">
             <img src={moreIcon} alt="" />
           </div>

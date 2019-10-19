@@ -1,17 +1,18 @@
 import React from 'react';
 import './css/App.css';
-import Header from './components/header';
-import Banner from './components/banner';
-import Steps from './components/steps';
-import SubscribeForm from './components/subscribe-form';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './components/home';
+import About from './components/about-us';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Banner />
-      <Steps />
-      <SubscribeForm />
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+        </Switch>
+      </Router>
     </div>
   );
 }
