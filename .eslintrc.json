@@ -3,7 +3,9 @@
         "browser": true,
         "es6": true
     },
-    "extends": "airbnb",
+    "extends": [
+        "airbnb"
+    ],
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
@@ -21,9 +23,22 @@
     ],
     "rules": {
         "react-hooks/rules-of-hooks": "error",
-        "react/prop-types": [1],
+        "react/prop-types": [
+            1
+        ],
         "react-hooks/exhaustive-deps": "warn",
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        "func-names": ["error", "never"]
-      }
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        ],
+        "func-names": [
+            "error",
+            "never"
+        ]
+    }
 }

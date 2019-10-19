@@ -8,10 +8,10 @@ import SubscribeForm from './components/subscribe-form';
 function App() {
   return (
     <div className="App">
-        <Header />
-        <Banner />
-        <Steps />
-        <SubscribeForm />
+      <Header />
+      <Banner />
+      <Steps />
+      <SubscribeForm />
     </div>
   );
 }
