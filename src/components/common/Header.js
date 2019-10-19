@@ -9,7 +9,12 @@ const Header = ({ textValue }) => (
 );
 
 Header.propTypes = {
-  textValue: PropTypes.string.isRequired,
+  textValue: PropTypes.arrayOf(
+    PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.object,
+    ]),
+  ).isRequired,
 };
 
 export default Header;
