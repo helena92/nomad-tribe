@@ -1,19 +1,19 @@
 # nomad-tribe
 Nomad Tribe  - app for digital nomads
 
-###Getting started
+### Getting started
  ```
  $ npm run initialize
  $ npm start
 ```
 
-###Build 
+### Build 
  ```
  $ npm run build (For development)
  $ npm run build:prod (For production)
 ```
 
-###Additional commands Commands:
+### Additional commands Commands:
  
   ```
   $ npm run lint       # linting
@@ -25,7 +25,7 @@ URL : http://localhost:3000/
 
 Navigate to http://localhost:3000/swagger for the API documentation.
 
-###Links
+### Links
 - Web framework for Node.js - [Express](http://expressjs.com/)
 - JavaScript ORM  for Node.js - [Bookshelf](http://bookshelfjs.org/)
 - SQL Query Builder for Postgres, MSSQL, MySQL, MariaDB, SQLite3, and Oracle - [Knex](http://knexjs.org/)
