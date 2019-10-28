@@ -2,6 +2,9 @@
 Nomad Tribe  - app for digital nomads
 
 ### Getting started
+install psql  
+https://www.robinwieruch.de/postgres-sql-macos-setup
+
  ```
  $ npm run initialize
  $ npm start
