@@ -1,20 +1,23 @@
 
-button[type="submit"] {
-    margin-left: -3.3vw;
-    margin-bottom: 1vw;
-    position: relative;
+[type="button"] {
+    display: inline-block;
+    margin-left: -3.4vw;
     border: none;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    border-radius: 4px;
+    width: 4vw;
+    height: 6.5vh;
+    font-size: 0;
+    background: transparent;
 }
 
-button[type="submit"] img {
-    width: 3.7vw;
-    height: 3.7vw;
+
+[type="button"] img {
+    display: inline-block;
+    width: 3.3vw;
+    height: 5.4vh;
+    font-size: 0;
+    
 }
 
 button:hover {
     cursor: pointer;
-    background-image: url(./left-arrow-blue.svg);
 }

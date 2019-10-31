@@ -5,9 +5,8 @@ import PropTypes from 'prop-types';
 import SubmitButton from './SubmitButton';
 import userService from '../../services/network/user';
 
-const EmailInput = ({ value, onChange }) => (
+const EmailInput = ({ value, onChange, isSubscribed }) => (
   <div className="email-wrapper">
-    <div>
       <input
         size="35"
         maxLength="320"
@@ -19,19 +18,21 @@ const EmailInput = ({ value, onChange }) => (
         onChange={onChange}
         required
       />
-      <span className="underline"/>
-    </div>
-    <SubmitButton
-      onSubmit={() => {
-        userService.set(value);
-      }}
-    />
+      {/* <span className="underline" /> */}
+      <SubmitButton
+        onSubmit={() => {
+          userService.set(value);
+          isSubscribed();
+        }}
+      />
   </div>
+
 );
 
 EmailInput.propTypes = {
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
+  isSubscribed: PropTypes.func.isRequired,
 };
 
 export default EmailInput;

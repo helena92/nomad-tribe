@@ -3,7 +3,7 @@ div.menu-item {
   align-items: center;
 }
 
-.main-header .container {
+.main-header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -11,14 +11,18 @@ div.menu-item {
 	padding: 20px;
 }
 
-h1.logo {
-  /* padding: .5em 1.5em; */
+h1.app-info {
   text-decoration: none;
   color: #161a23;
   font-size: 2.5vw;
-  /* text-decoration: underline; */
   line-height: 3.67;
   text-align: left;
+}
+
+
+.logo {
+  width: 12%;
+  height: 12%;
 }
 
 /* @media screen and (max-width: 500px) {

@@ -3,53 +3,36 @@
     display: flex;
     flex-direction: row;
     align-content: center;
-    padding: 2vw 0;
+    justify-content: center;
+    padding: 4vh 0;
+   
 }
 
 .input {
-    background-color: transparent;
+    background: linear-gradient(to right, #161a23, #161a23) 5px calc(100% - 5px)/calc(100% - 10px) 0.1vw no-repeat;
+    padding: 3.2%;
     border: none;
-    border-bottom: 1px solid#595a5d;
-    font-size: 2.2vw;
-    width: 30vw;
-    height: 3wv;
-    font-family: SegoeUI;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.34;
-    letter-spacing: normal;
-    text-align: left;
-    color: #595a5d;
-    padding: 1vw 0;
     outline: none;
-    box-sizing: border-box;
+    width: 28vw;
+    display: inline-block;
+    font-size: 1.8vw;
 }
 
-.input:focus {
-    outline: none;
-}
-
-input::-webkit-input-placeholder {
-    color: #595a5d;
-}
-
-input:focus::-webkit-input-placeholder {
-    color: #0452fa;
-}
-
-.input:focus+.underline {
-    transform: scale(1);
-}
-
+/* 
 .underline {
     background-color: #0452fa;
     display: block;
+    font-size: 0;
+    margin-top: 3vh;
     height: 2px;
     -webkit-transform: scale(0, 1);
     transform: scale(0, 1);
     -webkit-transition: all 0.5s linear;
     transition: all 0.5s linear;
-    width: 30vw;
-}
+    width: 25vw;
+} */
 
+
+.input:focus+.underline {
+    transform: scale(1);
+}
