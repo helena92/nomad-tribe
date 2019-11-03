@@ -1,11 +1,11 @@
 import React from 'react';
-import './assets/EmailInput.css';
-import './assets/SubmitButton.css';
+import './assets/css/EmailInput.css';
+import './assets/css/SubmitButton.css';
 import PropTypes from 'prop-types';
 import SubmitButton from './SubmitButton';
 import userService from '../../services/network/user';
 
-const EmailInput = ({ value, onChange, isSubscribed }) => (
+const EmailInput = ({ value, setEmail, showPopup }) => (
   <div className="email-wrapper">
       <input
         size="35"
@@ -15,14 +15,19 @@ const EmailInput = ({ value, onChange, isSubscribed }) => (
         type="text"
         value={value}
         name="email"
-        onChange={onChange}
+        onChange={async (e) => {
+          setEmail(e.target.value);
+        }}
+        // onChange={onChange}
         required
       />
       {/* <span className="underline" /> */}
       <SubmitButton
         onSubmit={() => {
           userService.set(value);
-          isSubscribed();
+          // this.props.value = '';
+          setEmail('');
+          showPopup();
         }}
       />
   </div>
@@ -31,8 +36,8 @@ const EmailInput = ({ value, onChange, isSubscribed }) => (
 
 EmailInput.propTypes = {
   value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-  isSubscribed: PropTypes.func.isRequired,
+  setEmail: PropTypes.func.isRequired,
+  showPopup: PropTypes.func.isRequired,
 };
 
 export default EmailInput;

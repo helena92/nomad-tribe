@@ -1,8 +1,7 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-import './assets/Header.css';
+import './assets/css/Header.css';
 import Navigation from '../navigation';
-import logo from './assets/logo.png';
+import logo from './assets/img/logo.png';
 
 const Header = () => (
   <header className="main-header">
