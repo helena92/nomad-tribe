@@ -7,29 +7,31 @@ import userService from '../../services/network/user';
 
 const EmailInput = ({ value, setEmail, showPopup }) => (
   <div className="email-wrapper">
-      <input
-        size="35"
-        maxLength="320"
-        className="input"
-        placeholder="email address"
-        type="text"
-        value={value}
-        name="email"
-        onChange={async (e) => {
-          setEmail(e.target.value);
-        }}
-        // onChange={onChange}
-        required
-      />
-      {/* <span className="underline" /> */}
-      <SubmitButton
-        onSubmit={() => {
+    <input
+      size="35"
+      maxLength="320"
+      className="input"
+      placeholder="email address"
+      type="text"
+      value={value}
+      name="email"
+      onChange={async (e) => {
+        setEmail(e.target.value);
+      }}
+      // onChange={onChange}
+      required
+    />
+    {/* <span className="underline" /> */}
+    <SubmitButton
+      onSubmit={() => {
+        if (value.length) {
           userService.set(value);
           // this.props.value = '';
           setEmail('');
           showPopup();
-        }}
-      />
+        }
+      }}
+    />
   </div>
 
 );
