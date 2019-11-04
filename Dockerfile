@@ -11,7 +11,7 @@ COPY ["./public", "./public"]
 COPY ["./client", "./client"]
 COPY ["./webpack", "./webpack"]
 
-RUN npm run clean && npm run webpack:prod
+RUN npm run webpack:prod
 
 ### STAGE 2: Setup ###
 #FROM nginx:1.13.3-alpine
