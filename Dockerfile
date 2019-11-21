@@ -1,13 +1,15 @@
 ### STAGE 1: Build ###
 FROM node:12.10.0-alpine as builder
 
-COPY client/package.json package-lock.json .babelrc ./
+WORKDIR /client
+
+COPY client/package.json client/package-lock.json .babelrc ./
 
 RUN npm set progress=false && npm config set depth 0 && npm cache clean --force && npm install
 
-COPY ["./public", "./public"]
-COPY ["./client", "./client"]
-COPY ["./webpack", "./webpack"]
+COPY ./public ./public
+COPY ./client ./client
+COPY ./webpack ./webpack
 
 RUN npm run webpack:prod
 
